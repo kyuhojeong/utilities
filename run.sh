@@ -3,7 +3,7 @@ sudo ./ipop-tincan &> tincan.log &
 sleep 1
 pid0=$!
 pid1=`pgrep -P $pid0`
-./svpn_controller.py -c config.json &> controller.log &
+./controller.py -c config.json &> controller.log &
 pid2=$!
 sudo -u ubuntu touch kill.sh
 sudo -u ubuntu cat > kill.sh << END
